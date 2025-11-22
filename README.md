@@ -21,6 +21,16 @@ dgx_spark_wheels/           # This repo (index + tooling)
 
 ## Quick Start
 
+### Install a Package Hosted by this repo
+
+```bash
+# Using your GitHub Pages URL
+pip install open3d --index-url https://tlangmo.github.io/dgx-spark-wheels/index/
+
+# Or as an extra index (searches PyPI first, then yours)
+pip install open3d --extra-index-url https://tlangmo.github.io/dgx-spark-wheels/index/
+```
+
 ### Prerequisites
 
 - Python 3.8+
@@ -101,24 +111,7 @@ git push origin main
 
 If using GitHub Pages, the index will be automatically updated.
 
-## Using the Repository
 
-### Install a Package
-
-```bash
-# Using your GitHub Pages URL
-pip install open3d --index-url https://tlangmo.github.io/dgx-spark-wheels/index/
-
-# Or as an extra index (searches PyPI first, then yours)
-pip install open3d --extra-index-url https://tlangmo.github.io/dgx-spark-wheels/index/
-```
-
-### In requirements.txt
-
-```
---extra-index-url https://tlangmo.github.io/dgx_spark_wheels/index/
-open3d==0.19.0
-```
 
 ### In pyproject.toml
 
