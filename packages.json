@@ -41,6 +41,22 @@
           "sha256": "f7a9aa6592c494f2f41fd37ee67547a81db80314140a4d339f8bba53b39c63a8"
         }
       ]
+    },
+    "usd-core": {
+      "source_repo": "https://github.com/tlangmo/OpenUSD-spark",
+      "source_branch": "tl/spark",
+      "upstream": "https://github.com/PixarAnimationStudios/OpenUSD",
+      "description": "",
+      "wheels": [
+        {
+          "filename": "usd_core-26.2-cp312-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+          "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/usd_core-26.2-cp312-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+          "python_version": "cp312",
+          "platform": "manylinux_2_17_aarch64.manylinux2014_aarch64",
+          "upload_date": "2025-11-22",
+          "sha256": "3c513b09e80749e4c7cf2bf3d506f8e3331e278cfc00a95514f3b1018cd4f42b"
+        }
+      ]
     }
   }
 }
