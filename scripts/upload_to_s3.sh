@@ -27,11 +27,7 @@ Environment Variables:
     AWS_PROFILE             AWS profile to use (optional)
 
 Examples:
-    # Upload wheel using S3_BUCKET env var
-    export S3_BUCKET=my-wheels-bucket
-    $0 wheels/open3d-0.18.0-cp310-cp310-linux_aarch64.whl
-
-    # Upload with explicit bucket
+       # Upload with explicit bucket
     $0 wheels/open3d-0.18.0-cp310-cp310-linux_aarch64.whl --bucket my-wheels-bucket
 
     # Upload without committing
@@ -162,8 +158,8 @@ echo "Calculating SHA256..."
 SHA256=$(sha256sum "$WHEEL_FILE" | awk '{print $1}')
 echo "  SHA256: $SHA256"
 
+
 # Upload to S3
-S3_KEY="${S3_PREFIX}${WHEEL_BASENAME}"
 S3_URL="https://${S3_BUCKET}.s3.amazonaws.com/${S3_KEY}"
 
 echo ""

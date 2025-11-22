@@ -79,26 +79,7 @@ This will:
 - Show next steps
 
 ### 2. Build a Wheel
-
-Build a wheel from your modified source:
-
-```bash
-./scripts/build.sh PACKAGE_NAME [--python 3.10] [--source-dir /path/to/source]
-```
-
-Examples:
-```bash
-# Build for current Python version
-./scripts/build.sh open3d
-
-# Build for specific Python version
-./scripts/build.sh open3d --python 3.10
-
-# Build from existing checkout
-./scripts/build.sh open3d --source-dir ~/src/Open3D-aarch64
-```
-
-The wheel will be saved to `./wheels/`
+Build the wheel manually using your preferred workflow
 
 ### 3. Upload to S3
 
@@ -135,17 +116,17 @@ If using GitHub Pages, the index will be automatically updated.
 
 ```bash
 # Using your GitHub Pages URL
-pip install open3d --index-url https://yourusername.github.io/dgx_spark_wheels/index/
+pip install open3d --index-url https://tlangmo.github.io/dgx-spark-wheels/index/
 
 # Or as an extra index (searches PyPI first, then yours)
-pip install open3d --extra-index-url https://yourusername.github.io/dgx_spark_wheels/index/
+pip install open3d --extra-index-url https://tlangmo.github.io/dgx-spark-wheels/index/
 ```
 
 ### In requirements.txt
 
 ```
---extra-index-url https://yourusername.github.io/dgx_spark_wheels/index/
-open3d==0.18.0
+--extra-index-url https://tlangmo.github.io/dgx_spark_wheels/index/
+open3d==0.19.0
 ```
 
 ### In pyproject.toml
@@ -153,7 +134,7 @@ open3d==0.18.0
 ```toml
 [[tool.poetry.source]]
 name = "dgx-wheels"
-url = "https://yourusername.github.io/dgx_spark_wheels/index/"
+url = "https://tlangmo.github.io/dgx_spark_wheels/index/"
 priority = "supplemental"
 ```
 
