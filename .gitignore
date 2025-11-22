@@ -31,3 +31,4 @@ Thumbs.db
 # Temporary files
 *.tmp
 .*.swp
+*.whl
