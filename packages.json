@@ -33,6 +33,22 @@
           "sha256": ""
         }
       ]
+    },
+    "kaolin": {
+      "source_repo": "https://github.com/tlangmo/kaolin-spark",
+      "source_branch": "v0.18.0-spark",
+      "upstream": "https://github.com/NVIDIAGameWorks/kaolin",
+      "description": "",
+      "wheels": [
+        {
+          "filename": "kaolin-0.18.0-cp312-cp312-linux_aarch64.whl",
+          "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/kaolin-0.18.0-cp312-cp312-linux_aarch64.whl",
+          "python_version": "cp312",
+          "platform": "linux_aarch64",
+          "upload_date": "2025-11-23",
+          "sha256": "4776b43ee966638d6c55568b1212f9112905db93d1410ec2bf7ba17a3914c876"
+        }
+      ]
     }
   }
 }
