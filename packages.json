@@ -6,14 +6,14 @@
       "source_repo": "https://github.com/tlangmo/Open3D/",
       "source_branch": "tl/v0.19.0_arm64_spark",
       "upstream": "https://github.com/isl-org/Open3D",
-      "description": "",
+      "description": "Open3D with Cuda 13 support for Grace-Blackwell DGX Spark",
       "wheels": [
         {
-          "filename": "open3d-0.19.0-cp312-cp312-manylinux_2_31_aarch64.whl",
-          "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/open3d-0.19.0-cp312-cp312-manylinux_2_31_aarch64.whl",
+          "filename": "open3d-0.19.0-cp312-cp312-manylinux_2_39_aarch64.whl",
+          "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/open3d-0.19.0-cp312-cp312-manylinux_2_39_aarch64.whl",
           "python_version": "cp312",
-          "platform": "manylinux_2_31_aarch64",
-          "upload_date": "2025-11-22",
+          "platform": "manylinux_2_39_aarch64",
+          "upload_date": "2025-11-28",
           "sha256": ""
         }
       ]
