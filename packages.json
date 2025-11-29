@@ -65,6 +65,22 @@
           "sha256": "16273bbc6e38630f8c8bd235d4448ee561569252d46bb3f5421f9d0e2ea453f7"
         }
       ]
+    },
+    "cumm-cu130": {
+      "source_repo": "https://github.com/tlangmo/cumm-spark",
+      "source_branch": "tl/spark",
+      "upstream": "https://github.com/FindDefinition/cumm",
+      "description": "",
+      "wheels": [
+        {
+          "filename": "cumm_cu130-0.8.2-cp312-cp312-linux_aarch64.whl",
+          "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/cumm_cu130-0.8.2-cp312-cp312-linux_aarch64.whl",
+          "python_version": "cp312",
+          "platform": "linux_aarch64",
+          "upload_date": "2025-11-29",
+          "sha256": "464d8a62891e4f3720ba76afabbfbb4c61c7b77a4320539e88ca371134b5fc38"
+        }
+      ]
     }
   }
 }
