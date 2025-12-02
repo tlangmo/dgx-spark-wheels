@@ -77,8 +77,8 @@
           "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/cumm_cu130-0.8.2-cp312-cp312-linux_aarch64.whl",
           "python_version": "cp312",
           "platform": "linux_aarch64",
-          "upload_date": "2025-11-29",
-          "sha256": "464d8a62891e4f3720ba76afabbfbb4c61c7b77a4320539e88ca371134b5fc38"
+          "upload_date": "2025-12-02",
+          "sha256": "0a8913e8663abcf4f59d3f7e5d2d5f088e1e1256016562af7eb96f689fa604b2"
         }
       ]
     }
