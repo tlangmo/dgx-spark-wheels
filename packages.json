@@ -81,6 +81,22 @@
           "sha256": "0a8913e8663abcf4f59d3f7e5d2d5f088e1e1256016562af7eb96f689fa604b2"
         }
       ]
+    },
+    "spconv_cu130": {
+      "source_repo": "https://github.com/tlangmo/spconv-spark",
+      "source_branch": "tl/spark",
+      "upstream": "https://github.com/traveller59/spconv",
+      "description": "",
+      "wheels": [
+        {
+          "filename": "spconv_cu130-2.3.8-cp312-cp312-linux_aarch64.whl",
+          "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/spconv_cu130-2.3.8-cp312-cp312-linux_aarch64.whl",
+          "python_version": "cp312",
+          "platform": "linux_aarch64",
+          "upload_date": "2025-12-02",
+          "sha256": "9a14268a5f24e4907a13d7155ded2038eb393ed8c41c864ddf557b0b3f157ab9"
+        }
+      ]
     }
   }
 }
