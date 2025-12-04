@@ -97,6 +97,22 @@
           "sha256": "9a14268a5f24e4907a13d7155ded2038eb393ed8c41c864ddf557b0b3f157ab9"
         }
       ]
+    },
+    "xatlas": {
+      "source_repo": "https://github.com/tlangmo/xatlas-python-spark",
+      "source_branch": "tl/spark",
+      "upstream": "https://github.com/mworchel/xatlas-python",
+      "description": "",
+      "wheels": [
+        {
+          "filename": "xatlas-0.0.11-cp312-cp312-linux_aarch64.whl",
+          "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/xatlas-0.0.11-cp312-cp312-linux_aarch64.whl",
+          "python_version": "cp312",
+          "platform": "linux_aarch64",
+          "upload_date": "2025-12-04",
+          "sha256": "76729e81849e1c77a79c13b8b4ecc2c736c64d126303ed104c7d46a7e1b40d33"
+        }
+      ]
     }
   }
 }
