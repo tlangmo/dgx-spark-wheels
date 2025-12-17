@@ -15,6 +15,14 @@
           "platform": "manylinux_2_39_aarch64",
           "upload_date": "2025-11-28",
           "sha256": ""
+        },
+        {
+          "filename": "open3d-0.19.0-cp312-cp312-manylinux_2_39_aarch64.whl",
+          "url": "https://dgx-spark-wheels.s3.amazonaws.com/wheels/open3d-0.19.0-cp312-cp312-manylinux_2_39_aarch64.whl",
+          "python_version": "cp312",
+          "platform": "manylinux_2_39_aarch64",
+          "upload_date": "2025-12-17",
+          "sha256": "ca2e4073a15dc318ab3ecbc962d70b76a38f86509c4f5e4f64715357090d3653"
         }
       ]
     },
