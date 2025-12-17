@@ -19,7 +19,7 @@ Arguments:
 Options:
     --bucket NAME           S3 bucket name (or set \$S3_BUCKET env var)
     --prefix PATH           S3 key prefix (default: wheels/)
-    --no-commit             Don't commit changes to packages.json
+    --commit                Automatically commit changes to packages.json
     -h, --help              Show this help message
 
 Environment Variables:
@@ -66,9 +66,9 @@ fi
 WHEEL_FILE="$1"
 shift
 
-S3_BUCKET="${S3_BUCKET:-}"
+S3_BUCKET="${S3_BUCKET:-dgx-spark-wheels}"
 S3_PREFIX="wheels/"
-DO_COMMIT=true
+DO_COMMIT=false
 
 while [ $# -gt 0 ]; do
     case "$1" in
@@ -80,8 +80,8 @@ while [ $# -gt 0 ]; do
             S3_PREFIX="$2"
             shift 2
             ;;
-        --no-commit)
-            DO_COMMIT=false
+        --commit)
+            DO_COMMIT=true
             shift
             ;;
         -h|--help)
@@ -202,7 +202,18 @@ if [ "$PACKAGE_EXISTS" = true ]; then
     )
 
     TMP_FILE=$(mktemp)
-    jq ".packages.\"$PACKAGE_NAME\".wheels += [$WHEEL_ENTRY]" "$PACKAGES_FILE" > "$TMP_FILE"
+
+    # Check if a wheel with this filename already exists
+    EXISTING_INDEX=$(jq -r ".packages.\"$PACKAGE_NAME\".wheels | to_entries | .[] | select(.value.filename == \"$WHEEL_BASENAME\") | .key" "$PACKAGES_FILE")
+
+    if [ -n "$EXISTING_INDEX" ]; then
+        # Update existing entry's metadata (upload_date and sha256)
+        echo "  Updating existing entry for $WHEEL_BASENAME"
+        jq ".packages.\"$PACKAGE_NAME\".wheels[$EXISTING_INDEX].upload_date = \"$UPLOAD_DATE\" | .packages.\"$PACKAGE_NAME\".wheels[$EXISTING_INDEX].sha256 = \"$SHA256\"" "$PACKAGES_FILE" > "$TMP_FILE"
+    else
+        # Add new entry
+        jq ".packages.\"$PACKAGE_NAME\".wheels += [$WHEEL_ENTRY]" "$PACKAGES_FILE" > "$TMP_FILE"
+    fi
     mv "$TMP_FILE" "$PACKAGES_FILE"
 
     echo "✓ Updated packages.json"
@@ -234,4 +245,4 @@ echo ""
 echo "Wheel URL: $S3_URL"
 echo ""
 echo "To use this wheel:"
-echo "  pip install $PACKAGE_NAME --index-url https://yourusername.github.io/dgx_spark_wheels/index/"
+echo "  pip install $PACKAGE_NAME --extra-index-url https://tlangmo.github.io/dgx_spark_wheels/index/"

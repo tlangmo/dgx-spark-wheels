@@ -55,7 +55,7 @@ pip install open3d --extra-index-url https://tlangmo.github.io/dgx-spark-wheels/
    - Go to repository Settings → Pages
    - Source: Deploy from a branch
    - Branch: `main` → `/index` folder
-   - Your index will be available at: `https://yourusername.github.io/dgx_spark_wheels/index/`
+   - Your index will be available at: `https://tlangmo.github.io/dgx_spark_wheels/index/`
 
 ## Workflow
 
